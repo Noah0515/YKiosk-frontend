@@ -5,7 +5,7 @@ function Login() {
     const handleLogin = () => {
         // 백엔드 시큐리티 입구로 보냅니다.
         window.location.href = "http://localhost:8080/YKiosk/oauth2/authorization/kakao";
-      };
+    };
 
     return (
         <div className="">
