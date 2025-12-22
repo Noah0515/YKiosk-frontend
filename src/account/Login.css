@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+.kakao-login-btn {
+    height: 50px; /* 세로폭 고정 */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain; /* 가로 세로 비율 유지하며 꽉 채움 */
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    display: block;
+}
+
+.kakao-login-btn {
+    width: 300px; 
+    background-image: url('kakao_login_medium_wide.png');
+}
+
+@media (min-width: 768px) {
+    .kakao-login-btn {
+      width: 366px;
+      background-image: url('kakao_login_large_narrow.png');
+    }
+}
+  
+@media (min-width: 1024px) {
+    .kakao-login-btn {
+      width: 600px;
+      background-image: url('kakao_login_large_wide.png');
+    }
+}
