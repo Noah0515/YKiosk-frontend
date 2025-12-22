@@ -5,6 +5,7 @@ import MainLayout from './home/MainLayout';
 import Login from './account/Login'
 import { Routes, Route } from 'react-router-dom';
 import Home from './temp/Home';
+import Store from './temp/Store';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* element에 MainLayout을 지정하고, 그 안에 자식 Route를 넣습니다 */}
       <Route element={<MainLayout />}>
         {/* 이 안에 있는 애들은 전부 MainLayout의 <Outlet /> 자리에 렌더링됩니다 */}
-        <Route index element={<Home /> /*기본 화면면*/} />
+        <Route index element={<Home /> /*기본 화면*/} />
+        <Route path="/my/store" element={<Store />} />
       </Route>
 
       {/* 그룹 B: 네비게이션바가 필요 없는 화면들 (Login, Special) */}

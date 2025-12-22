@@ -1,9 +1,11 @@
 import {useState, useEffect } from 'react'
+import { Outlet } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 import axios from 'axios'
 import '../Style.css'
 import Navbar from '../default/Navbar'
 import Home from '../temp/Home';
+import Store from '../temp/Store';
 
 function MainLayout() {
       //const [userInfo, setUserInfo] = useState(null);
@@ -35,40 +37,10 @@ function MainLayout() {
 
 
   return (
-    <div style={{ padding: '50px', textAlign: 'center', fontFamily: 'sans-serif' }}>
-      <Navbar userName={userName}/>
-
-      <h1>Y-Kiosk Test Page</h1>
-      <hr />
-
-      {!userName ? (
-        <div style={{ marginTop: '20px' }}>
-          <p>아직 로그인되지 않았습니다.</p>
-          {/* 카카오 공식 디자인 색상 적용 */}
-          <button 
-            onClick={handleLogin}
-            style={{
-              backgroundColor: '#FEE500',
-              color: '#191919',
-              border: 'none',
-              padding: '12px 24px',
-              borderRadius: '6px',
-              fontSize: '16px',
-              fontWeight: 'bold',
-              cursor: 'pointer'
-            }}
-          >
-            카카오 로그인 시작하기
-          </button>
-        </div>
-      ) : (
-        <div style={{ marginTop: '20px', border: '1px solid #ddd', padding: '20px' }}>
-          <h3>🎉 로그인 성공!</h3>
-          <p><strong>닉네임:</strong> {userName}</p>
-          <button onClick={() => fetchUser(null)}>로그아웃(화면만)</button>
-        </div>
-      )}
-      <Home ></Home>
+    <div className="">
+        <Navbar userName={userName}/>
+        <Outlet context={{userName}}/>
+        {/*<Home userName={userName}/>*/}
     </div>
   );
 }
