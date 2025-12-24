@@ -7,6 +7,6 @@ const api = axios.create({
     withCredentials: true, //쿠키 챙겨보내기
 });
 
-api.defaults.headers.common['Content-Type'] = 'applicatioin/json'
+api.defaults.headers.common['Content-Type'] = 'application/json'
 export default api;
 
