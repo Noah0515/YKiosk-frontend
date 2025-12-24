@@ -6,6 +6,8 @@ import LoginPage from './account/LoginPage'
 import { Routes, Route } from 'react-router-dom';
 import HomePage from './temp/HomePage';
 import StorePage from './temp/StorePage';
+import StoreDetailPage from './temp/StoreDetailPage';
+import CreateStorePage from './temp/CreateStorePage';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         {/* 이 안에 있는 애들은 전부 MainLayout의 <Outlet /> 자리에 렌더링됩니다 */}
         <Route index element={<HomePage /> /*기본 화면*/} />
         <Route path="/my/store" element={<StorePage />} />
+        <Route path="/my/store/detail/:id" element={<StoreDetailPage />} />
+        <Route path="/my/store/create" element={<CreateStorePage />} />
       </Route>
 
       {/* 그룹 B: 네비게이션바가 필요 없는 화면들 (Login, Special) */}
