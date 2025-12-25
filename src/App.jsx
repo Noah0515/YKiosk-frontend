@@ -18,10 +18,11 @@ function App() {
         {/* 이 안에 있는 애들은 전부 MainLayout의 <Outlet /> 자리에 렌더링됩니다 */}
         <Route index element={<HomePage /> /*기본 화면*/} />
         <Route path="/my/store" element={<StorePage />} />
-        <Route path="/my/store/detail/:id" element={<StoreDetailPage />} />
+        <Route path="/my/store/:id" element={<StoreDetailPage />} />
         <Route path="/my/store/create" element={<CreateStorePage />} />
-        <Route path="/my/store/detail/menu/:id" element={<MenuPage />} />
-        <Route path="/my/store/detail/employee/:id" element={<EmployeePage />} />
+        <Route path="/my/store/:id/menu/" element={<MenuPage />} />
+        <Route path="/my/store/:id/menu/detail" element={<MenuDetailPage />} />
+        <Route path="/my/store/:id/employee/:id" element={<EmployeePage />} />
       </Route>
 
       {/* 그룹 B: 네비게이션바가 필요 없는 화면들 (Login, Special) */}

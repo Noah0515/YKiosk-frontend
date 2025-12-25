@@ -7,7 +7,7 @@ function StoreCard({ store }) {
     const navigate = useNavigate();
 
     const goStoreDetailPage = () => {
-        navigate('/my/store/detail/{store.storeId')
+        navigate('/my/store/{store.storeId}')
     }
 
     console.log(store);
