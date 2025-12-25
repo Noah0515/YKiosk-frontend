@@ -10,9 +10,15 @@ function StoreCard({ store }) {
         navigate('/my/store/detail/{store.storeId')
     }
 
+    console.log(store);
+    //console.log(state.storeName);
+    //console.log(store.state);
     return (
         <div class="card" onClick={goStoreDetailPage}>
-            <h4>{store.name}</h4>
+            <h4>{store.storeName}</h4>
+            <p>{store.state}</p>
         </div>
     );
 }
+
+export default StoreCard;
