@@ -38,7 +38,7 @@ function MainLayout() {
       }
     };
     fetchUser();
-  })
+  }, [])
 
 
   return (
