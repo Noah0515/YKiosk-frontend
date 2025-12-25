@@ -20,6 +20,7 @@ function App() {
         <Route path="/my/store" element={<StorePage />} />
         <Route path="/my/store/detail/:id" element={<StoreDetailPage />} />
         <Route path="/my/store/create" element={<CreateStorePage />} />
+        <Route path="/my/store/detail/menu/:id" element={<MenuPage />} />
       </Route>
 
       {/* 그룹 B: 네비게이션바가 필요 없는 화면들 (Login, Special) */}
