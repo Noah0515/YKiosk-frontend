@@ -2,7 +2,6 @@ import {useState} from 'react'
 import { useNavigate, useOutletContext } from 'react-router-dom';
 import axios from 'axios'
 import '../Style.css'
-import './Home.css'
 
 function HomePage() {
     const navigate = useNavigate();
