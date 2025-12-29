@@ -38,9 +38,9 @@ function App() {
           <Route path="menu/group/create" element={<CreateGroupPage />} />
           <Route path="menu/group/:id" element={<MenuGroupDetailPage />} />
 
-          <Route path="menu/group/:id/category" element={<MenuCategoryPage />} />
+          {/*<Route path="menu/group/:id/category" element={<MenuCategoryPage />} />*/}
           <Route path="menu/group/:id/category/create" element={<CreateCategoryPage />} />
-          <Route path="menu/group/:id/category/:id" element={<MenuCategoryDetailPage />} />
+          <Route path="menu/group/:id/category/:id" element={<MenuCategoryPage />} />
         </Route>
       </Route>
 
