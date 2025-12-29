@@ -2,7 +2,8 @@ import {useState, useEffect } from 'react'
 import { Outlet } from 'react-router-dom'
 import ReactDOM from 'react-dom/client'
 import axios from 'axios'
-import '../Style.css'
+import '../Style.css';
+import '../CustomStyle.css'
 import Navbar from '../default/Navbar'
 import HomePage from '../temp/HomePage';
 import StorePage from '../temp/StorePage';
@@ -42,7 +43,7 @@ function MainLayout() {
 
 
   return (
-    <div className="">
+    <div className="main-layout">
         <Navbar userName={userName}/>
         <Outlet context={{userName}}/>
         {/*<Home userName={userName}/>*/}
