@@ -19,7 +19,9 @@ function MenuPage() {
     console.log("가게정보: ", store)
     return (
         <div className="store-content">
-            
+            <div>
+                <h2>메뉴 홈페이지</h2>
+            </div>
             <div class="content-card content-card-horizen height-30">
                 <div>
                     <button onClick={goMenuGroupPage}>
