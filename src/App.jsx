@@ -8,6 +8,15 @@ import HomePage from './temp/HomePage';
 import StorePage from './temp/StorePage';
 import StoreDetailPage from './temp/StoreDetailPage';
 import CreateStorePage from './temp/CreateStorePage';
+import MenuPage from "./temp/MenuPage";
+import MenuDetailPage from "./temp/MenuDetailPage";
+import EmployeePage from "./temp/EmployeePage"
+import MenuCategoryPage from './temp/MenuCategoryPage';
+import CreateCategoryPage from './temp/CreateCategoryPage';
+import MenuGroupPage from './temp/MenuGroupPage';
+import CreateGroupPage from './temp/CreateGroupPage';
+import MenuGroupDetailPage from './temp/MenuGroupDetailPage';
+import MenuCategoryDetailPage from './temp/MenuCategoryDetailPage';
 
 function App() {
   return (
@@ -18,11 +27,21 @@ function App() {
         {/* 이 안에 있는 애들은 전부 MainLayout의 <Outlet /> 자리에 렌더링됩니다 */}
         <Route index element={<HomePage /> /*기본 화면*/} />
         <Route path="/my/store" element={<StorePage />} />
-        <Route path="/my/store/:id" element={<StoreDetailPage />} />
         <Route path="/my/store/create" element={<CreateStorePage />} />
-        <Route path="/my/store/:id/menu/" element={<MenuPage />} />
-        <Route path="/my/store/:id/menu/detail" element={<MenuDetailPage />} />
-        <Route path="/my/store/:id/employee/:id" element={<EmployeePage />} />
+        <Route path="/my/store/:id" element={<StoreDetailPage />}>
+          <Route path="menu" element={<MenuPage />} />
+          <Route path="menu/detail" element={<MenuDetailPage />} />
+
+          <Route path="employee/:id" element={<EmployeePage />} />
+
+          <Route path="menu/group" element={<MenuGroupPage />} />
+          <Route path="menu/group/create" element={<CreateGroupPage />} />
+          <Route path="menu/group/:id" element={<MenuGroupDetailPage />} />
+
+          <Route path="menu/group/:id/category" element={<MenuCategoryPage />} />
+          <Route path="menu/group/:id/category/create" element={<CreateCategoryPage />} />
+          <Route path="menu/group/:id/category/:id" element={<MenuCategoryDetailPage />} />
+        </Route>
       </Route>
 
       {/* 그룹 B: 네비게이션바가 필요 없는 화면들 (Login, Special) */}
