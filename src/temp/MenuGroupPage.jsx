@@ -53,6 +53,9 @@ function MenuGroupPage() {
     return (
         <div className="store-content">
             <div className="content-card">
+                <div>
+                    <h2>메뉴 그룹 설정 페이지</h2>
+                </div>
                 <div onClick={goCreateGroupPage}>
                     <h3>메뉴 그룹 만들기</h3>
                 </div>
