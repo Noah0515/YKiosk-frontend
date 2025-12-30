@@ -17,6 +17,7 @@ import MenuGroupPage from './temp/MenuGroupPage';
 import CreateGroupPage from './temp/CreateGroupPage';
 import MenuGroupDetailPage from './temp/MenuGroupDetailPage';
 import MenuCategoryDetailPage from './temp/MenuCategoryDetailPage';
+import CreateMenuPage from './temp/CreateMenuPage';
 
 function App() {
   return (
@@ -41,6 +42,8 @@ function App() {
           {/*<Route path="menu/group/:id/category" element={<MenuCategoryPage />} />*/}
           <Route path="menu/group/:id/category/create" element={<CreateCategoryPage />} />
           <Route path="menu/group/:id/category/:id" element={<MenuCategoryPage />} />
+
+          <Route path="menu/group/:id/category/:id/menu/create" element={<CreateMenuPage />} />
         </Route>
       </Route>
 
