@@ -1,13 +1,15 @@
 .main-layout {
     height: 100%;
     width: 100%;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .store-container { 
     display: flex;
     height: 100%;
     width: 100%;
+    flex: 1;
 }
 
 .sidebar {
@@ -30,8 +32,8 @@
     height: 100%;
     width: 100%;
     justify-content: stretch; 
-    align-content: start;
-    flex:1;
+    align-content: stretch;
+    overflow: hidden;
 }
 
 .store-header {
@@ -46,7 +48,6 @@
     /* inset x축 y축 blur spread 색상 */
     /* spread를 -10px로 주어 그림자 두께를 줄입니다 */
     box-shadow: inset 10px 0 20px -10px rgba(0, 0, 0, 0.1);
-    height: 100%;
     width: 100%;
     flex: 1;
     justify-content: stretch; 
@@ -55,6 +56,8 @@
 .content-card {
     background-color: #FAFAFA;
     padding: 0.5rem;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .content-card > .content-card-horizen {
@@ -64,6 +67,19 @@
 .content-card > .content-card-vertical {
     display: grid;
 }
+
+.content-scrollable {
+    overflow-y: auto;
+    height: 100%;
+    min-height: 0;
+    -webkit-overflow-scrolling: touch;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+}
+
 
 .content-component {
     display: flex;
@@ -75,6 +91,79 @@
     gap: 0.75rem;
     padding: 1rem;
     background-color: #FFFFFF;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.option-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    margin-top: 20px;
+    /* 앞서 말씀드린 부드러운 경계 그림자 효과 */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.option-header {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.option-category-list {
+    padding-left: 20px;
+}
+
+.option-category-item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 8px;
+    align-items: center;
+}
+
+.option-category-item::before {
+    content: "ㄴ";
+    color: #ccc;
+}
+
+input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.btn-add-main {
+    width: 100%;
+    padding: 15px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-add-small {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 5px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.btn-del {
+    background: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
 }
 
 
