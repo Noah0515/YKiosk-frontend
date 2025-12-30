@@ -23,7 +23,7 @@ function Navbar({userName}) {
     }
 
     return (
-        <nav className="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <nav className="navbar navbar-expand-lg bg-secondary text-uppercase sticky-top" id="mainNav">
             <div className="container">
                 <a className="navbar-brand" onClick={() => goRootPage()}>Y Kiosk</a>
                 {!userName? (
