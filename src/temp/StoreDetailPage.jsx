@@ -34,7 +34,7 @@ function StoreDetailPage() {
                 <img src={orderedIcon} alt="메뉴 아이콘"/>
                 <img src={statisticsIcon} alt="메뉴 아이콘"/>
             </div>
-            <div className="content-body">
+            <div className="content-body ">
                 <div className="store-header">
                     <h3>{store.storeName}</h3>
                 </div>
