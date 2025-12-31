@@ -24,17 +24,20 @@ function StoreDetailPage() {
         navigate("employee");
     }
 
+    const goOrderDetailPage = () => {
+        navigate("order-detail", {state: { store }})
+    }
     console.log("가게 정보", store)
 
     return (
         <div className="store-container" >
             <div className="sidebar">
                 <img src={menuIcon} alt="메뉴 아이콘" onClick={goStoreMenuPage}/>
-                <img src={employeeIcon} alt="메뉴 아이콘" />
-                <img src={orderedIcon} alt="메뉴 아이콘"/>
-                <img src={statisticsIcon} alt="메뉴 아이콘"/>
+                <img src={employeeIcon} alt="직원 아이콘" />
+                <img src={orderedIcon} alt="주문내역 아이콘" onClick={goOrderDetailPage}/>
+                <img src={statisticsIcon} alt="통계계 아이콘"/>
             </div>
-            <div className="content-body ">
+            <div className="content-body">
                 <div className="store-header">
                     <h3>{store.storeName}</h3>
                 </div>
