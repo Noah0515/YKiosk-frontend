@@ -18,6 +18,7 @@ import CreateGroupPage from './temp/CreateGroupPage';
 import MenuGroupDetailPage from './temp/MenuGroupDetailPage';
 import MenuCategoryDetailPage from './temp/MenuCategoryDetailPage';
 import CreateMenuPage from './temp/CreateMenuPage';
+import OrderDetailPage from './temp/OrderDetailPage';
 
 function App() {
   return (
@@ -38,6 +39,8 @@ function App() {
           <Route path="menu/group" element={<MenuGroupPage />} />
           <Route path="menu/group/create" element={<CreateGroupPage />} />
           <Route path="menu/group/:id" element={<MenuGroupDetailPage />} />
+
+          <Route path="order-detail" element={<OrderDetailPage />} />
 
           {/*<Route path="menu/group/:id/category" element={<MenuCategoryPage />} />*/}
           <Route path="menu/group/:id/category/create" element={<CreateCategoryPage />} />
